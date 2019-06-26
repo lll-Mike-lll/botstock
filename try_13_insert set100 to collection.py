@@ -20,7 +20,7 @@ import pymongo as pm
 cli = pm.MongoClient()
 db = cli['stock']
 
-for i in range(99):
+for i in range(100):
     coll = db['stock_list']
     data = {'stock_name':data1[2].iloc[i,0]}
     coll.insert_one(data)
