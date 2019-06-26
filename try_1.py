@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
+Created on Wed Jun 26 08:27:06 2019
 
-This is a temporary script file.
+@author: Lenovo
 """
-import pandas as pd
-url = "http://www.panphol.com/data/page/stockprice/TOP#"
-data = pd.read_html(url)
-print(data[0])
+import pymongo as pm
+cli = pm.MongoClient()
+db = cli['stock']
 
-#print(data[0].iloc[0,1])

@@ -9,14 +9,6 @@ url = "https://marketdata.set.or.th/mkt/sectorquotation.do?sector=SET100&languag
 data = pd.read_html(url)
 #print(data[2])
 
-#for i in range(99):
-#    print(data[2].iloc[i,0])
+for i in range(99):
+    print(data[2].iloc[i,0])
 
-import pymongo as pm
-cli = pm.MongoClient()
-db = cli['stock']
-
-for i in range(6):
-    coll = db['list'+str(i)]
-    data = {'no':i+10}
-    coll.insert_one(data)
