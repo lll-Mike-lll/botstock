@@ -8,7 +8,7 @@ Created on Wed Jun 26 11:02:33 2019
 import pymongo as pm
 cli = pm.MongoClient()
 db = cli['stock']
-coll = db['stock_list']
+coll = db['stock_list2']
 
 #add name in this
 #add name in this

@@ -11,6 +11,9 @@ name = 'aav'
 coll = db[name]
 
 data1 = {'date':'2',
-         'min':'12'}
+         'open':44,
+         'min':'12',
+         'max': 1556546453,
+         }
 
 coll.insert_one(data1)
