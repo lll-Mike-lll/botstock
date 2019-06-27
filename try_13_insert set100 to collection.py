@@ -8,6 +8,7 @@ Created on Wed Jun 26 08:43:49 2019
 import pandas as pd
 url = "https://marketdata.set.or.th/mkt/sectorquotation.do?sector=SET100&language=th&country=TH"
 data1 = pd.read_html(url)
+
 #print(data[2])
 #print(type(data1[2].iloc[1,0]))
 

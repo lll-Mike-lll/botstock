@@ -9,6 +9,6 @@ url = "https://marketdata.set.or.th/mkt/sectorquotation.do?sector=SET100&languag
 data = pd.read_html(url)
 #print(data[2])
 
-for i in range(99):
+for i in range(100):
     print(data[2].iloc[i,0])
 
