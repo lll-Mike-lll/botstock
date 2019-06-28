@@ -27,6 +27,7 @@ for n in data2:
                  n['percent chg'],
                  n['volume'],
                  n['value']])
+    
 print(len(name))
 print(len(name[0])) 
 
