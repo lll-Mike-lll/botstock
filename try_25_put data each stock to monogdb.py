@@ -25,6 +25,7 @@ for j in range(2):
     print('e')
     for i1 in range(len(data[0])):
         coll2 = db2[name[j]]
+        #reverse order older to recently
         i=len(data[0])-1-i1
         data1 = {'date':data[0].iloc[i,0],
              'open':data[0].iloc[i,1],
