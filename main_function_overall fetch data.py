@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+   # -*- coding: utf-8 -*-
 """
 Created on Fri Jun 28 10:57:43 2019
 
@@ -17,7 +17,7 @@ for n in data2:
 
 print('a')
 
-db2 = cli['stock7']
+db2 = cli['stock2']
 kk = 0
 
 for j in range(len(name)):
