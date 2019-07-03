@@ -57,12 +57,15 @@ for i in range(len(stock_name1)):
         print(stock_name1[i] + ' ////////////////insert')
         insert_list.append(stock_name1[i])
    
-print(update_list)
-print(len(update_list))
-print(add_list)
-print(len(add_list))
-print(insert_list)
-print(len(insert_list))
+
+# =============================================================================
+# print(update_list)
+# print(len(update_list))
+# print(add_list)
+# print(len(add_list))
+# print(insert_list)
+# print(len(insert_list))
+# =============================================================================
         
         
             
