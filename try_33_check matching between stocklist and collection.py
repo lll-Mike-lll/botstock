@@ -27,7 +27,9 @@ for y in get_name:
 #print(stock_name2)
 print(type(stock_name1[0]))
 print(type(stock_name2[0]))
-
+update_list = []
+add_list = []
+insert_list = []
 for i in range(len(stock_name2)):
     k=0
     k2=0
@@ -38,8 +40,10 @@ for i in range(len(stock_name2)):
             k2=k2+1
     if k==1:
         print(stock_name2[i] + ' update')
+        update_list.append(stock_name2[i])
     elif k2==len(stock_name1):
         print(stock_name2[i] + ' //////////////// add')
+        add_list.append(stock_name2[i])
 
 for i in range(len(stock_name1)):
     k=0
@@ -50,9 +54,15 @@ for i in range(len(stock_name1)):
         else:
             k2=k2+1
     if k2==len(stock_name2):
-        print(stock_name2[i] + '')
+        print(stock_name1[i] + ' ////////////////insert')
+        insert_list.append(stock_name1[i])
    
-    
+print(update_list)
+print(len(update_list))
+print(add_list)
+print(len(add_list))
+print(insert_list)
+print(len(insert_list))
         
         
             
