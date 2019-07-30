@@ -13,3 +13,5 @@ data = coll.find()
 for i in data:
     print(i['stock_name'])
 
+
+
