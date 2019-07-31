@@ -19,33 +19,40 @@ for i in data:
 #get collection name for mongodb
 db2 = cli['stock6']
 data2 = db2.list_collection_names()
-print('a')
-print(data2)
-print(len(data2))
-print(type(data2[0]))
-print('a')
+#print('a')
+#print(data2)
+#print(len(data2))
+#print(type(data2[0]))
+#print('a')
 
-db3 = cli['copy2']
-for i in range(len(data2)):
-    m = data2[i]
-    coll2 =db2[m]
-    data3 = coll2.find()
-    zzdata = []
-    for n in data3:
-        zzdata.append({'date':n['date'],
-                          'open':n['open'],
-                          'max':n['max'],
-                          'min':n['min'],
-                          'close':n['close'],
-                          'change':n['change'],
-                          'percent chg':n['percent chg'],
-                          'volume':n['volume'],
-                          'value':n['value']})
-    coll3 = db3[data2[i]]
-    coll3.insert_many(zzdata)
-    print(m)
-print('run complete')
+copy_name = input('set db_name : ')
+set_pass = input('pass=? :')
+check_pass = 0
+if set_pass=='mike':
+    db3 = cli[copy_name]
+    for i in range(len(data2)):
+        m = data2[i]
+        coll2 =db2[m]
+        data3 = coll2.find()
+        zzdata = []
+        for n in data3:
+            zzdata.append({'date':n['date'],
+                              'open':n['open'],
+                              'max':n['max'],
+                              'min':n['min'],
+                              'close':n['close'],
+                              'change':n['change'],
+                              'percent chg':n['percent chg'],
+                              'volume':n['volume'],
+                              'value':n['value']})
+        coll3 = db3[data2[i]]
+        coll3.insert_many(zzdata)
+        print(m)
+    print('run complete')
+    check_pass = 1
     
+if check_pass==0:
+    print('pass is not correct')    
 # =============================================================================
 # db3 = cli['copy_stock_1']
 # for i in range(len(data2)):
