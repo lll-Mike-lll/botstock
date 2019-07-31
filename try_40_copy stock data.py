@@ -25,39 +25,26 @@ print(len(data2))
 print(type(data2[0]))
 print('a')
 
-db3 = cli['xx']
-m = data2[1]
-coll2 =db2[m]
-data3 = coll2.find()
-zzdata = []
-for n in data3:
-    zzdata.append({'date':n['date'],
-                      'open':n['open'],
-                      'max':n['max'],
-                      'min':n['min'],
-                      'close':n['close'],
-                      'change':n['change'],
-                      'percent chg':n['percent chg'],
-                      'volume':n['volume'],
-                      'value':n['value']})
-print(zzdata)
-#for j in range(len(zzdata)):
-#    data_set_mike = {'date':zzdata[i][0],
-#                      'open':zzdata[i][1],
-#                      'max':zzdata[i][2],
-#                      'min':zzdata[i][3],
-#                      'close':zzdata[i][4],
-#                      'change':zzdata[i][5],
-#                      'percent chg':zzdata[i][6],
-#                      'volume':zzdata[i][7],
-#                      'value':zzdata[i][8]}
-#print(data_set_mike)
-print(len(zzdata))
-coll3 = db3[data2[1]]
-coll3.insert_many(zzdata)
-#print(zzdata)
-print(m)
-    
+db3 = cli['copy2']
+for i in range(len(data2)):
+    m = data2[i]
+    coll2 =db2[m]
+    data3 = coll2.find()
+    zzdata = []
+    for n in data3:
+        zzdata.append({'date':n['date'],
+                          'open':n['open'],
+                          'max':n['max'],
+                          'min':n['min'],
+                          'close':n['close'],
+                          'change':n['change'],
+                          'percent chg':n['percent chg'],
+                          'volume':n['volume'],
+                          'value':n['value']})
+    coll3 = db3[data2[i]]
+    coll3.insert_many(zzdata)
+    print(m)
+print('run complete')
     
 # =============================================================================
 # db3 = cli['copy_stock_1']
@@ -110,3 +97,13 @@ print(m)
 # #print(data4)
 # =============================================================================
 
+#for j in range(len(zzdata)):
+#    data_set_mike = {'date':zzdata[i][0],
+#                      'open':zzdata[i][1],
+#                      'max':zzdata[i][2],
+#                      'min':zzdata[i][3],
+#                      'close':zzdata[i][4],
+#                      'change':zzdata[i][5],
+#                      'percent chg':zzdata[i][6],
+#                      'volume':zzdata[i][7],
+#                      'value':zzdata[i][8]}
