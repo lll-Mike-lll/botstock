@@ -21,6 +21,8 @@ print(len(f_data))
 print(type(f_data[1]))
 
 db2 = cli['stock']
+
+
 coll2 = db2['copy_stock_list2']
 
 for i in range(len(f_data)):
